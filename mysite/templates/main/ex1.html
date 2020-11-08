@@ -1,0 +1,108 @@
+﻿{% load static %}
+{% static 'css' as cssDir %}
+{% static 'img/main/ex1' as imgDir %}
+{% static 'js' as jsDir %}
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title> ex1 step8  </title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='{{cssDir}}/style_ex1.css'>
+	<link rel='stylesheet' type='text/css' href='{{jsDir}}/prefixfree.min.js'>
+</head>
+<body>
+
+	<!-- 배경동영상 -->
+	<figure class="vid">
+		<video  loop="loop" autoplay="autoplay" muted="muted">
+			<source src="{{imgDir}}/nike.mp4" type="video/mp4"/>
+		</video>
+	</figure>
+
+	<!-- 로고 -->
+	<h1><img src="{{imgDir}}/logo2.png" /></h1>
+
+	<!-- header -->
+	<header>
+		<ul id="gnb">
+			<li class="on">
+				<a href="#"><em><i class="fa fa-refresh fa-spin"></i>Hearthstone</em></a>
+				<ul>
+					<li><a href="#"><em><b>English</b></em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em>Brand Info</em></a>
+				<ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em> Community</em></a>
+				<ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em>Product Value</em></a>
+				<ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em>Company History</em></a>
+				<ul>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+
+	<!-- sns 버튼모음 -->
+	<ul id="sns">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+		<li><a href="#"><i class="fa fa-android"></i></a></li>
+	</ul>
+
+	<!-- 웹폰트 텍스트박스 -->
+	<section class="txtBox">
+		<p class="txt">Best Qualified<b>New Card Pack</b></p>
+		<p class="tit">50<em>/ 24</em></p>
+	</section>
+
+	<!-- 하단 컨텐츠박스 -->
+	<section id="side">
+		<div class="con">
+			<p>
+				<em>공포의 무덤</em>
+				<a href="#"><img src="{{imgDir}}/hearth1.jpg" /></a>
+			</p>
+			<p>
+				<em>어둠의 반격</em>
+				<a href="#"><img src="{{imgDir}}/hearth2.jpg" /></a>
+			</p>
+			<p>
+				<em>갈라크론드의 부활</em>
+				<a href="#"><img src="{{imgDir}}/hearth3.jpg" /></a>
+			</p>
+		</div>
+		<!-- 자동롤링 버튼 -->
+		<div class="btnContents">
+			<i class="fa fa-angle-double-left"></i>
+			<i class="fa fa-angle-double-left"></i>
+			<i class="fa fa-angle-double-left"></i>
+		</div>
+	</section>
+
+</body>
+</html>

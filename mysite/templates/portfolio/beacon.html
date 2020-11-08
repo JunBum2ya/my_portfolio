@@ -1,0 +1,60 @@
+{% extends 'form.html' %}
+
+{% block center %}
+<style>
+    .layout{
+        font-family: "배달의민족 주아";
+        font-size:20px;
+    }
+</style>
+    <div class="container">
+        <div class="row">
+            <ul class="list-group">
+                <a href="{% url 'portfolio_beacon' %}" class="list-group-item active">프로젝트 개요</a>
+                <a href="#" class="list-group-item">작동 원리</a>
+                <a href="{% url 'portfolio_beacon_video' %}" class="list-group-item">프로젝트 시연영상</a>
+            </ul>
+        </div>
+        <div class="row">
+            <ol>
+                <li>개발 기간 : 2016/03~2016/06</li>
+                <li>개요</li>
+                    <ul>
+                        <li>
+                        ‘비콘을 이용한 소지품 찾기 어플리케이션’은 비콘을 관리할 소지품에 부착하여 
+                        스마트폰이 지속적으로 소지품을 관리할 수 있습니다.<br> 또한 아두이노, 
+                        KT IoT makers와 연동되어 보다 다양한 기능을 구현할 수 있었습니다.
+
+                        </li>
+                    </ul>
+                <li>역할</li>
+                    <ul>
+                        <li>안드로이드 어플리케이션 개발</li>
+                        <li>KT IoT makers와 연동</li>
+                        <li>아두이노를 KT IOT makers와 연결</li>
+                    </ul>
+                <li>시나리오</li>
+                    <ol>
+                        <li>스마트폰이 beacon이 부착된 소지품과의 거리를 측정한다.</li>
+                        <li>소지품이 스마트폰과 일정 거리를 벗어났을 경우 Toast 메시지와 함께 알람이 울린다.</li>
+                        <li>KT IoT makers를 통해 실시간으로 거리를 저장하고 거리가 멀어질 
+                        경우 아두이노의 LED는 더욱 빠르게 점멸하여 소지품의 방향을 알 수 있게 한다.</li>
+                        <li>소지품이 스마트폰 일정 반경안에 들어왔을 경우 Toast 메시지, 알람, LED 점멸을 중지한다.</li>
+                    </ol>
+                <li>사용기술</li>
+                    <ul>
+                        <li>KT IoT makers</li>
+                        <li>아두이노</li>
+                        <li>안드로이드</li>
+                    </ul>
+                <li>구현기능</li>
+                    <ul>
+                        <li>실시간으로 소지품과의 거리 측정</li>
+                        <li>자유롭게 관리할 소지품을 추가, 삭제 가능</li>
+                        <li>메시지 전송 등으로 사용자들에게 분실 알림</li>
+                    </ul>
+                <li>특이사항 : KT와 협력하여 KT IoT makers를 이용하여 개발</li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}

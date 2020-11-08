@@ -1,0 +1,68 @@
+{% extends 'form.html' %}
+{% block center %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-tags"></span>
+                            &nbsp;&nbsp;이준범의 게시판
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{{imgDir}}/dku_logo_s.png" alt="개발자 이미지">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">단국대학교</h4><br>
+                            게시판입니다. 여러분의 생각을 자유롭게 올리시길 바랍니다.
+                        </div>
+                    </div>
+                </div>
+				<left><a href="/board/create" class="btn btn-success btn-xs" class="col-sm-2"><h3>글쓰기</h3></a></left>
+				<table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>글쓴이</th>
+                            <th>제목</th>
+                            <th>수정일</th>
+							<th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+						{% for values in Table %}
+						<tr>
+							<td>{{ values.id }}</td>
+							<td>{{ values.user_name }}</td>
+							<td><a href="{% url 'board_detail' values.id %}">{{ values.title }}</a></td>
+							<td>{{ values.update_date }}</td>
+							<th>{{ values.count }}</th>
+						</tr>
+						{% endfor %}
+                    </tbody>
+                </table>
+				<center>
+				{% if Table.has_previous %}
+					<a href="{% url 'board_paging' Table.previous_page_number %}">{{ Table.previous_page_number }}<</a>
+				{% endif %}
+				<a href="{% url 'board_paging' Table.number %}">{{ Table.number }}</a>
+				{% if Table.has_next %}
+					<a href="{% url 'board_paging' Table.next_page_number %}">>{{ Table.next_page_number }}</a>
+				{% endif %}
+				</center>
+                <div class="panel-footer">
+                    <blockquote>
+                    ‘子曰(자왈) “學而時習之(학이시습지)면 不亦說乎(불역열호)아<br>
+                    有朋自遠方來(유붕자원방래)면 不亦樂乎(불역락호)아<br>
+                    人不知而不溫(인부지이불온)이면 不亦君子乎(불역군자호)아'<br>
+                    <right>논어</right>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

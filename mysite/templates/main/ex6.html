@@ -1,0 +1,89 @@
+﻿{% load static %}
+{% static 'css' as cssDir %}
+{% static 'img/main/ex6' as imgDir %}
+{% static 'js/ex6' as jsDir %}
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>테라 신규 업데이트</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{cssDir}}/style_ex6.css" />
+	<script type="text/javascript" src="{{jsDir}}/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="{{jsDir}}/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="{{jsDir}}/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="{{jsDir}}/prefixfree.min.js"></script>
+	<script type="text/javascript" src="{{jsDir}}/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="{{jsDir}}/custom.js"></script>
+</head>
+<body>
+	<!--로고 -->
+	<img src="{{imgDir}}/tera.jpg"/>
+
+	<!--주 메뉴-->
+	<ul id="menu">
+		<li class="on"><a href="#">Chapter 1</a></li>
+		<li><a href="#">Chapter 2</a></li>
+		<li><a href="#">Chapter 3</a></li>
+		<li><a href="#">Chapter 4</a></li>
+		<li><a href="#">Chapter 5</a></li>
+	</ul>
+
+	<!--sns 버튼 추가-->
+	<ul id='sns'>
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+	</ul>
+<div id="wrap">
+	<!--첫 번째 박스-->
+	<section>
+		<article>
+			<p>모험의 시작</p>
+			<span>신규/복귀 유저 지원 이벤트</span>
+		</article>
+		<img class="p11" src="{{imgDir}}/obj11.png"/>
+		<img class="p12" src="{{imgDir}}/obj12.png"/>
+		<img class="p13" src="{{imgDir}}/obj13.png"/>
+	</section>
+	<!--두 번째 박스-->
+	<section>
+		<article>
+			<p>신규 보스 유령선</p>
+			<span>끝없는 전투를 경험하라.</span>
+		</article>
+		<img class="p21" src="{{imgDir}}/obj21.png"/>
+		<img class="p22" src="{{imgDir}}/obj22.png"/>
+	</section>
+	<!--세 번째 박스-->
+	<section>
+		<article>
+			<p>전쟁의 서막</p>
+			<span>대규모 PVP 업데이트</span>
+		</article>
+		<img class="p31" src="{{imgDir}}/obj31.png"/>
+		<img class="p32" src="{{imgDir}}/obj32.png"/>
+		<img class="p33" src="{{imgDir}}/obj33.png"/>
+	</section>
+	<!--네 번째 박스-->
+	<section>
+		<article>
+			<p>하늘성</p>
+			<span>하늘성 던전 개편</span>
+		</article>
+		<img class="p41" src="{{imgDir}}/obj41.png"/>
+		<img class="p42" src="{{imgDir}}/obj42.png"/>
+	</section>
+	<!--다섯 번째 박스-->
+	<section id="page5">
+		<article>
+			<p>압도적인 경품</p>
+			<span>현실 세계로 경품을 보냅니다.</span>
+		</article>
+		<img class="p31" src="{{imgDir}}/obj31.png"/>
+		<img class="p32" src="{{imgDir}}/obj32.png"/>
+		<img class="p33" src="{{imgDir}}/obj33.png"/>
+	</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+{% extends 'form.html' %}
+
+{% block center %}
+	<div class="container">
+
+		<div class="row">
+
+				<table class="table table-striped"
+
+					style="text-align: center; border: 1px solid #dddddd">
+
+					<thead>
+
+						<tr>
+
+							<th colspan="4"
+
+								style="background-color: #eeeeee; text-align: center;">글 보기 </th>
+
+						</tr>
+
+					</thead>
+
+					<tbody>
+
+						<tr>
+
+							<th style="width: 20%;"> 글 제목 </th>
+
+							<td colspan="3">{{ board.title }}</td>
+
+						</tr>
+
+						<tr>
+
+							<th>작성자</th>	
+
+							<td colspan="3">{{ board.user_id.user_name }}</td>
+
+						</tr>
+
+						<tr>
+
+							<th>작성일</th>	
+
+							<td>{{ board.create_date |date:"y-m-d h:i:s"}}</td>
+
+							<th style="width: 20%;">수정일</th>
+							<td>{{ board.create_date |date:"y-m-d h:i:s"}}</td>
+
+						</tr>
+
+
+						<tr>
+
+							<th>내용</th>	
+
+							<td colspan="3" style="min-height: 800px; text-align: left;"><textarea class="form-control" disabled>{{ board.detail }}</textarea></td>
+
+						</tr>
+
+						<th>첨부파일</th><td colspan="3"><a href='download'>{{ board.attachment }}</a></td>
+						
+
+					</tbody>
+
+				</table>	
+
+				<a href = "{% url 'board_paging' 1 %}" class="btn btn-primary">목록</a>
+
+				
+				{% if is_active %}
+					<a href="/board/delete/{{board.id}}" class="btn btn-primary">삭제</a>
+					<a href="/board/update/{{board.id}}" class="btn btn-primary">수정</a>
+				{% endif %}
+
+		</div>
+		{% if is_active %}
+		<form class="form-horizontal" method="post" action="reply" enctype="multipart/form-data">{% csrf_token %}
+			<div class="form-group">
+				<label>댓글 : </label>
+				<textarea class="form-control" rows="5" id="commentContent" name="commentContent"></textarea>
+				<br>
+				<button type="submit" class="btn pull-right">등록</button>
+			</div>
+		</form>
+		{% endif %}
+		{% for reply in replies %}
+            <form action="#" method="POST">{% csrf_token %}
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">{{reply.user_id.user_name}}</span>
+					<textarea class="form-control">{{ reply.detail }}</textarea>
+                </div>
+            </form>
+		{% endfor %}
+	</div>
+
+{% endblock %}

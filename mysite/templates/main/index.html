@@ -1,0 +1,162 @@
+{% load static %}
+{% static 'css' as cssDir %}
+{% static 'img/main' as imgDir %}
+{% static 'js' as jsDir %}
+<!DOCTYPE html >
+
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> 나만의 포트폴리오 </title>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='{{cssDir}}/style01.css'>
+	<link rel="stylesheet" href="{{cssDir}}/bootstrap.css">
+</head>
+<body>
+
+	<header>
+		<h1></h1>
+
+		<ul id="gnb">
+			<li><a href="{% url 'porfolio_index' %}"><i class="fa fa-university"></i>Information</a></li>
+			<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text-o"></i>MENU<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'main_ex1' %}">동영상 템플릿</a></li>
+                    <li><a href="{% url 'main_ex2' %}">반응형 웹 예제</a></li>
+                    <li><a href="{% url 'main_ex3' %}">홈쇼핑 예제</a></li>
+					<li><a href="http://best.dreamitbiz.com/leejunbum/04/">애니메이션 예제</a></li>
+					<li><a href="{% url 'main_ex5' %}">시간에 따라 변하는 페이지</a></li>
+					<li><a href="{% url 'main_ex6' %}">자동으로 넘어가는 페이지</a></li>
+                </ul>
+            </li>
+			<li><a href="picture"><i class="fa fa-star-half-o"></i>WORLDCUP</a></li>
+			<li><a href="#"><i class="fa fa-bullhorn"></i>EVENT</a></li>
+			<li><a href="{% url 'board_paging' 1 %}"><i class="fa fa-comments-o"></i>BOARD</a></li>
+			{% if is_active %}
+				<li><a href="{% url 'member_logout' %}"><i class="fa fa-send"></i>LOGOUT</a></li>
+			{% else %}
+				<li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    	aria-haspopup="true" aria-expanded="false"><i class="fa fa-send"></i>LOGIN<span class="caret"></span></a>
+                	<ul class="dropdown-menu">
+                    	<li><a href="{% url 'member_signin' %}">로그인</a></li>
+                    	<li><a href="{% url 'member_signup' %}">회원가입</a></li>
+                	</ul>
+            	</li>
+			{% endif %}
+		</ul>
+
+			<ul id="sns">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-android"></i></a></li>
+			</ul>
+
+		<div class="snsSet">
+			<a href="#"><img src="{{imgDir}}/images/sns1.png" alt="about" /></a>
+			<a href="#"><img src="{{imgDir}}/images/sns2.gif" alt="contact" /></a>
+
+		</div>
+	</header>
+
+	<section>
+		<article>
+			<div class="bg bg1">
+				<span>경희루</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="txt">
+				<i class="fa fa-arrow-right"></i>
+				<p>
+					<strong><a href="{% url 'main_properties' %}">서울시 문화재 현황</a></strong><br />
+					<em>2016년 2월 16일에 서울특별시가 제공한 서울시 문화재 현황입니다.<br>
+					구단위로 문화재의 현황을 확인할 수 있습니다.</em>
+				</p>
+			</div>
+		</article>
+
+		<article>
+			<div class="txt">
+				<i class="fa fa-spin fa-refresh"></i>
+				<p><strong>Refresh</strong></p>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg2">
+				<span>Comet</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg3">
+				<span>Beacon & IoT</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="txt">
+				<i class="fa fa-arrow-right"></i>
+				<p>
+					<strong><a href="{% url 'portfolio_beacon' %}">Beacon Project</a></strong><br />
+					<em>Beacon을 이용한 IoT구현</em>
+				</p>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg4">
+				<span>Beacon Project</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="txt">
+				<i class="fa fa-arrow-right"></i>
+				<strong>Beacon Project</strong><br />
+				<em>Beacon을 이용한 IoT구현</em>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg5">
+				<span>The milky way</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg6">
+				<span>Kids</span>
+			</div>
+		</article>
+
+		<article>
+			<div class="txt">
+				<i class="fa fa-arrow-right"></i>
+				<p>
+					<strong><a href="http://ec2-3-35-43-20.ap-northeast-2.compute.amazonaws.com/">쇼핑몰</a></strong><br />
+					<em>추천알고리즘이 적용된 온라인 쇼핑몰</em>
+				</p>
+			</div>
+		</article>
+
+		<article>
+			<div class="bg bg7">
+				<span>Shoping Mall</span>
+			</div>
+		</article>
+
+	</section>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{jsDir}}/bootstrap.js"></script>
+	<script src="{{jsDir}}/prefixfree.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+{% extends 'form.html' %}
+
+{% block center %}
+    <div class="container">
+        <div class="header">
+            <div class="page-header">
+                <a href="/" class="btn btn-default btn-xs" style="margin: 10px">메인화면</a>
+                <h1>로그인 오류</h1>
+            </div>
+        </div>
+        <div class='body'>
+            <h1>로그인 실패</h1>
+            <h4>아이디 또는 비밀번호가 틀렸습니다. 로그인을 다시 시도해주세요.</h4>
+            <a href="{% url 'member_signin' %}" class="btn btn-success btn-xs" style="margin: 10px">로그인 하기</a>
+        </div>
+    </div>
+{% endblock %}

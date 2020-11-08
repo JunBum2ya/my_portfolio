@@ -1,0 +1,171 @@
+{% extends 'form.html' %}
+
+{% block center %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">이준범을 소개합니다.</h1>
+            <p class="text-center">저는 이런 사람입니다.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>이준범이란?</h2>
+                <p>우연히 백엔드 개발자를 알게된 후 웹에 빠져든 4년제 졸업예정자입니다. 비콘을 이용한 소지품 관리 서비스와 
+                tensorflow를 이용하여 추천기능을 구현한 온라인 쇼핑몰 프로젝트에 참가하였습니다. 그외에도 KG 아이티뱅크에서
+                개설한 Python을 활용한 웹서버 구축 강좌와 (주)글로벌아잍티정보기술에서 주최한 오픈소스 기반 빅데이터
+                융합 SW 개발자 과정에 참여해서 경험을 쌓았습니다. 언젠가 대규모 서버 구현에 꼭 참가하고 싶습니다.
+                </p>
+                <p><a class="btn btn-default" data-target="#modal1" data-toggle="modal">자세히 알아보기</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>이준범의 포트폴리오 사이트란?</h2>
+                <p>본 사이트는 제작자 이준범이 지금까지 제작한 프로젝트와 웹페이지를 통합적으로 관리하기 위한
+                웹사이트로 python 오픈소스 웹 프레임워크인 Django를 사용하여 css,html,javascript 등 프론트엔드에 관한
+                자료들과 (주)글로벌아이티기술에서 주관한오픈소스 기반 빅데이터 융합 SW개발자 과정에서 구현한
+                R과 반응형 웹 디자인 결과를 통합했다. 그 외에도 Bootstrap의 기능을 다수 활용하여 보다 편리한 웹 사이트를
+                구현했다.
+                </p>
+                <p><a class="btn btn-default" data-target="#modal2" data-toggle="modal">자세히 알아보기</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>왜 백엔드 개발자를 선택했는가?</h2>
+                <h4>웹사이트가 나에게 말을 건 순간</h4>
+                <p>대학교 4년 동안 C언어, 네트워크, 데이터베이스 심지어 그래픽까지 다양한
+                분야를 배웠습니다. 하지만 어떤것도 평생을 좌우하는 직업으로 삼고 싶지 않았습니다. 그러다 3학년
+                1학기에 웹프로그래밍 강좌를 듣게 되었습니다. 초등학생때 배운 Html과 달리 해당 수업은
+                javascript, css, JSP로 단순히 브라우저에서 보여주는 데이터에 불과한 웹페이지가
+                살아숨쉬는 유기체가 내 말에 응답했습니다. 그 경이로운 순간은 지금도 생생하게 기억하고 있습니다. </p>
+                <p><a class="btn btn-default" data-target="#modal3" data-toggle="modal">자세히 알아보기</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span>
+                &nbsp;&nbsp;나의 능력</h3>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img class="media-object" src="{{imgDir}}/spring.png" alt="spring"></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="#">Spring</a>&nbsp;<span class="badge">중하</span></h4>
+                        Spring과 Spring Boot를 이용하여 간단한 웹사이트를 제작할 수 있습니다.
+                    </div>
+                </div>
+                <hr>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img class="media-object" src="{{imgDir}}/django.png" alt="django"></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="#">Django</a>&nbsp;<span class="badge">중상</span></h4>
+                        Django Rest_Framework 라이브러리를 사용하여 온라인 쇼핑몰의 API 서버 구현했습니다.<br>
+                        본인의 포트폴리오 사이트 구현
+                    </div>
+                </div>
+                <hr>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img class="media-object" src="{{imgDir}}/JSP.png" alt="JSP"></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="#">JSP</a>&nbsp;<span class="badge">중상</span></h4>
+                        온라인 쇼핑몰의 프론트엔드를 구현했습니다.<br>
+                        '웹으로 구현한 스마트홈' 프로젝트의 참여했습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal" id="modal1" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        이준범이란?
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        단국대학교 소프트웨어학과 4학년 재학중입니다. 대학교 4년동안 java, python, C#등
+                        다양한 언어를 배웠습니다. 앞으로 PHP와 Javascript를 배울 예정입니다.<br>
+                        자신이 맡은 일에는 끝까지 책임을 지고 완수하는 것이 저의 미덕이자 자랑입니다.
+                        저의 꿈은 대규모 서버 구축입니다. 앞으로도 언제나 노력하는 개발자가 되겠습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal" id="modal2" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        이준범의 포트폴리오란?
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        본 사이트는 제작자 이준범이 지금까지 제작한 프로젝트와 
+                        웹페이지를 통합적으로 관리하기 위한
+                        웹사이트로 python 오픈소스 웹 프레임워크인 Django를 사용하여 
+                        css,html,javascript 등 프론트엔드에 관한
+                        자료들과 (주)글로벌아이티기술에서 주관한오픈소스 기반 빅데이터 
+                        융합 SW개발자 과정에서 구현한
+                        R과 반응형 웹 디자인 결과를 통합했다. 그 외에도 Bootstrap의 기능을 다수 
+                        활용하여 보다 편리한 웹 사이트를 구현했다.<br><br>
+
+                        사용언어 : HTML,CSS,Javascript,python<br>
+                        사용 라이브러리 : Pandas,Django,Bootstrap<br>
+                        DB : Postgresql<br>
+                        github : https://github.com/dku32131738/my_portfolio.git<br><br>
+
+                        기능<br>
+                        1. session을 이용하여 로그인 유지<br>
+                        2. 회원가입시 E-mail 인증<br>
+                        3. DB와 연동되어 게시판 구현<br>
+                        4. Bootstrap으로 반응영 웹 구현<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal" id="modal3" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        왜 백엔드 개발자를 선택했는가?
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        <h3>웹사이트가 나에게 말을 건 순간</h3> <br>
+                        대학교 4년 동안 C언어, 네트워크, 데이터베이스 심지어 그래픽까지 다양한
+                        분야를 배웠습니다. 하지만 어떤것도 평생을 좌우하는 직업으로 삼고 싶지 않았습니다. 그러다 3학년
+                        1학기에 웹프로그래밍 강좌를 듣게 되었습니다. 초등학생때 배운 Html과 달리 해당 수업은
+                        javascript, css, JSP로 단순히 브라우저에서 보여주는 데이터에 불과한 웹페이지가
+                        살아숨쉬는 유기체가 내 말에 응답했습니다. 그 경이로운 순간은 지금도 생생하게 기억하고 있습니다.<br><br>
+                        <h3>시련과 백엔드 개발자를 알기까지…</h3><br>
+                        웹프로그래밍에 흥미를 가지게 되었지만 대학교에서 웹에 대해 자세히 배울 수 있는 
+                        수업은 별로 없었습니다. 네트워크, 데이터베이스 등 웹을 이해하는데 도움이 되는 수업이
+                        대부분이었고 실제로 웹을 구현할 기회는 별로 없었습니다. 
+                        결국 혼자 힘으로 웹에 대해 알아갈 수 밖에 없었습니다. 
+                        처음에는 개발환경을 구축하는 것만으로 버거웠지만 점차 다양한 기능과 
+                        미적 요소를 가지게 되었습니다. 그리고 배우면 배울수록 웹은 심오한 분야라는 것을 
+                        알게 되었습니다. 다양한 프레임워크와 네트워크, 데이터베이스 등 다양한 기술이 필요하고
+                        프론트엔드 개발자, 풀스택 개발자 등 다양한 개발자들이 협업한다는 사실을 알았습니다. 
+                        저는 그 중에서 백엔드 분야에 관심을 가지게 되었습니다. 내가 만든 API를 누군가가 
+                        사용하고 앱,웹 등 다양한 단말기가 내 서버에 접속한다는 점은 제 가슴을 뛰게 
+                        만들었습니다.<br><br>
+                        <h3>백엔드 개발자를 꿈꾸며</h3><br>
+                        백엔드 개발자를 꿈꾸게 되었지만 아직 배울 것이 많습니다. 
+                        하지만 내가 만든 웹사이트에 작은 기능을 하나씩 추가할 때마다 저는 한단계 
+                        나아갈 수 있었습니다. 그래서 저는 모르는 것이 두렵지 않습니다. 
+                        배우는 것이 즐겁습니다. 
+                        언젠가 대규모 서버를 구현하는 것이 제 목표입니다.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
