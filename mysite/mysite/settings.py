@@ -53,8 +53,8 @@ INSTALLED_APPS = [
     'main',
 ]
 
-AWS_ACCESS_KEY_ID='AKIAXOZFJS45DFPPVQG7'
-AWS_SECRET_ACCESS_KEY='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'
+AWS_ACCESS_KEY_ID='password'
+AWS_SECRET_ACCESS_KEY='password'
 AWS_REGION='ap-northeast-2'
 AWS_STORAGE_BUCKET_NAME='leejunbum'
 AWS_S3_CUSTOM_DOMAIN='%s.s3.%s.amazonaws.com'%(AWS_STORAGE_BUCKET_NAME,AWS_REGION)
@@ -106,7 +106,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'portfolio_db',
         'USER': 'my_user',
-        'PASSWORD': 'ljb32131738',
+        'PASSWORD': 'password',
         'HOST': 'portfolio-db.cmgjk0zxzto0.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
     }
